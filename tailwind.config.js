@@ -78,6 +78,9 @@ module.exports = {
           in: '2.9375rem',
           out: '8.25rem',
         },
+        backgroundImage: {
+          'logo': "url('./assets/logo989.png')"
+        },
         opacity: {
           hover: '0.7',
         },
