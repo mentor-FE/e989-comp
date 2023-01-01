@@ -4,7 +4,7 @@ import Nav from "./../Widgets/Nav";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col w-[1440px] my-0 mx-auto">
+    <div className="min-h-screen flex flex-col w-[1440px] my-0 mx-auto">
       <Header />
       <Nav />
       <main className="flex-1 p-6">
