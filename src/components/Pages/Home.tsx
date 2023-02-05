@@ -1,9 +1,9 @@
-import CardList from "../Widgets/CardList";
+// import CardList from "../Widgets/CardList";
 
 const Home = () => {
   return (
     <>
-    <CardList />
+    {/* <CardList /> */}
     </>
   );
 };
