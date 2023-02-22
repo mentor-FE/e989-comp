@@ -1,8 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.cdnfonts.com/css/montserrat?styles=17402,17398,17400,17401,17403,17404,17391,17393');
-
+@import "@fontsource/montserrat";
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Montserrat',
@@ -10,9 +12,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #262A2B;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
