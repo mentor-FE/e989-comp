@@ -3,10 +3,10 @@ import { Routes } from "./../../constants/index";
 
 const Nav: FC = () => {
   return (
-    <nav className={"p-4 flex gap-12 text-xl"}>
+    <nav className={"flex gap-12 lg:gap-6 md:gap-3 text-xl sm:hidden"}>
       {Routes.map((route) => (
         <a
-          className="text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
+          className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
           key={route.path}
           href={route.path}
         >

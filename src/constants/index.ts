@@ -3,8 +3,8 @@ import { partners } from "./../assets/index";
 export const Routes = [
   { path: "/", label: "Главная", anchor: "" },
   { path: "", label: "Проверить заявку" },
-  { path: "/#section-2", label: "Гарантийный ремонт", anchor: "section-2" },
-  { path: "/#section-3", label: "Контакты", anchor: "section-3" },
+  { path: "/#warranty", label: "Гарантийный ремонт", anchor: "section-2" },
+  { path: "/#contacts", label: "Контакты", anchor: "section-3" },
 ];
 
 export const Partners = [

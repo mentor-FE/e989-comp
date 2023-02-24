@@ -45,14 +45,11 @@ module.exports = {
       inherit: "inherit",
     },
     screens: {
-      tablet: "640px",
-      // => @media (min-width: 640px) { ... }
-
-      laptop: "1024px",
-      // => @media (min-width: 1024px) { ... }
-
-      desktop: "1280px",
-      // => @media (min-width: 1280px) { ... }
+      'xl': { 'max': '1365px' }, // 1024+
+      'lg': { 'max': '1023px' }, // 768+
+      'md': { 'max': '767px' }, // 576+
+      'sm': { 'max': '575px' }, // 375+
+      'xs': { 'max': '374px' }, // 320+
     },
     extend: {
       maxWidth: {

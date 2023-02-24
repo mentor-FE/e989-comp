@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import "@fontsource/montserrat";
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
