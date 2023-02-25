@@ -4,7 +4,8 @@ import Typography from "../Shared/Typography";
 
 const Header: FC = () => {
   return (
-    <header className="px-6">
+    <>
+        <header className="px-6">
       <div className="flex h-24 items-center justify-between gap-6 md:gap-3">
         <span className="text-pumpkin-orange flex items-center text-5xl md:text-4xl font-bold ">
           e989
@@ -38,6 +39,8 @@ const Header: FC = () => {
         </div>
       </section>
     </header>
+    </>
+
   );
 };
 
