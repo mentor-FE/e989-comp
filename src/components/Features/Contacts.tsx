@@ -39,9 +39,9 @@ const Contacts: React.FC = () => {
                     Контакты:
                   </Typography>
                   <Typography>
-                    <p className="mb-4">
+                    <span className="block mb-4">
                       <a href="mailto:sots.ru@mail.ru">ots.ru@mail.ru</a>
-                    </p>
+                    </span>
 
                     <a href="tel:+79898293242">+7 (989) 829-32-42</a>
                   </Typography>
