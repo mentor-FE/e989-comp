@@ -1,11 +1,10 @@
-  
-import Button from '../Shared/Button';
-import Typography from '../Shared/Typography';
+import Button from "../Shared/Button";
+import Typography from "../Shared/Typography";
 import systemBlock from "../../assets/block.jpg";
 
-  const Article: React.FC = () => {
-    return (
-      <>
+const Article: React.FC = () => {
+  return (
+    <>
       <main className="flex sm:flex-col">
         <div className="w-1/2 sm:w-full flex flex-col justify-between">
           <img
@@ -53,8 +52,8 @@ import systemBlock from "../../assets/block.jpg";
           </div>
         </div>
       </main>
-      </>
-    );
-  };
-  
-  export default Article;
+    </>
+  );
+};
+
+export default Article;
