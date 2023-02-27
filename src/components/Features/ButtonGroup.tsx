@@ -1,5 +1,5 @@
 import Button from "../Shared/Button";
-import grayLine from "../../assets/grey.jpg";
+import grayLine from "../../assets/grey.webp";
 
 const ButtonGroup: React.FC = () => {
   return (

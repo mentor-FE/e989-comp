@@ -1,6 +1,6 @@
 import Button from "../Shared/Button";
 import Typography from "../Shared/Typography";
-import systemBlock from "../../assets/block.jpg";
+import systemBlock from "../../assets/block.webp";
 
 const Article: React.FC = () => {
   return (

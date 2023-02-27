@@ -1,4 +1,4 @@
-import laptop from "../../assets/laptop.jpg";
+import laptop from "../../assets/laptop.webp";
 
 const Image: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import map from "../../assets/map.png";
+import map from "../../assets/map.webp";
 import WorkTime from "../Widgets/WorkTime";
 import Typography from "./../Shared/Typography";
 

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./../Widgets/Header";
-import motherboard from "../../assets/motherboard.jpg";
+import motherboard from "../../assets/motherboard.webp";
 
 const Layout = () => {
   return (
