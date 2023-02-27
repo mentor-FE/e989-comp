@@ -27,10 +27,10 @@ const Header: FC = () => {
           </div>
         </div>
         <div>
-          <Typography className="text-grey-chateau text-base font-bold mt-9 mb-5">
+          <Typography className="text-grey-chateau sm:text-white text-base font-bold mt-9 mb-5">
             Восстановление оргтехники в кратчайшие сроки.
           </Typography>
-          <Typography className="text-grey-chateau text-sm">
+          <Typography className="text-grey-chateau sm:text-white text-sm">
             Мы предлагаем качественный ремонт оргтехники по доступным ценам,
             выполненный опытными специалистами с многолетним опытом работы.
             Гарантируем вам высокое качество наших услуг и удовольствие от
