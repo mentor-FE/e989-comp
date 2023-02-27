@@ -13,7 +13,7 @@ const Header: FC = () => {
         <Nav />
       </div>
 
-      <section className="mt-12 mb-6 max-w-[500px]">
+      <section className="mt-12 xs:mt-0 mb-6 max-w-[500px]">
         <div className="flex flex-col">
           <div className="text-white text-base font-bold uppercase lg:text-xs">
             ремонт оргтехники
