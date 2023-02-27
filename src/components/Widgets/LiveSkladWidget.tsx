@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-interface LiveSkladWidgetProps {
+interface LiveskladOptions {
   api_key: string;
   title?: string;
   placeholder?: string;
@@ -14,40 +14,37 @@ interface LiveSkladWidgetProps {
   currency?: string;
 }
 
-const LiveSkladWidget: React.FC<LiveSkladWidgetProps> = ({
-  api_key,
-  title,
-  placeholder,
-  name_placeholder,
-  button_text,
-  width,
-  height,
-  color,
-  columns,
-  hide_given,
-  currency,
-}) => {
-  useEffect(() => {
-    const extendedWindow = window as ExtendedWindow;
-    extendedWindow.liveskladOptions = {
-      api_key,
-      title,
-      placeholder,
-      name_placeholder,
-      button_text,
-      width,
-      height,
-      color,
-      columns,
-      hide_given,
-      currency,
-    };
-    // ...код для добавления скрипта
-  }, [api_key, title, placeholder, name_placeholder, button_text, width, height, color, columns, hide_given, currency]);
-
-  return (
-    <div id="livesklad-widget"></div>
-  );
+interface Props {
+  options: LiveskladOptions;
 }
 
-export default LiveSkladWidget;
+declare global {
+  interface Window {
+    liveskladOptions?: LiveskladOptions;
+  }
+}
+
+const LiveskladWidget: React.FC<Props> = ({ options }) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = `${
+      document.location.protocol === 'https:' ? 'https://' : 'http://'
+    }my.livesklad.com/static/widget.js`;
+
+    const head = document.getElementsByTagName('head')[0];
+    head.appendChild(script);
+    return () => {
+      head.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.liveskladOptions = options;
+  }, [options]);
+
+  return <div id="livesklad-widget" className="widget" />;
+};
+
+export default LiveskladWidget;

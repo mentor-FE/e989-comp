@@ -23,3 +23,17 @@ export const Partners = [
   { name: "packard_bell", path: partners.packard_bell },
   { name: "tenda", path: partners.tenda },
 ];
+
+export const LiveskladOptions = {
+  api_key: "tB5HIm77UqMixqIGFRaP",
+  title: "Проверить статус ремонта",
+  placeholder: "Номер телефона +7 или заказа",
+  name_placeholder: "Фамилия",
+  button_text: "Открыть заказы",
+  width: "100%",
+  height: "220px",
+  color: "#1C88B1",
+  columns: ["number", "device", "brand", "status", "price"],
+  hide_given: true,
+  currency: "руб",
+};
