@@ -24,7 +24,7 @@ const CardItem: React.FC<CardItemProps> = ({ partner }) => {
 
   return (
     <motion.div
-      className="bg-white w-52 p-2 object-contain h-20"
+      className="bg-white w-52 flex items-center justify-center object-cover h-32"
       ref={ref}
       initial={animation.initial}
       animate={animation.animate}
