@@ -1,4 +1,3 @@
-import Button from "../Shared/Button";
 import Typography from "../Shared/Typography";
 import systemBlock from "../../assets/block.webp";
 import ScrollButton from "../Widgets/ScrollButtonАnimate";
