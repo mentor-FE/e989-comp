@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import { FC } from "react";
 import Typography from "../Shared/Typography";
+import RepairSection from './RepairSection';
 
 const Header: FC = () => {
   return (
@@ -14,18 +15,7 @@ const Header: FC = () => {
       </div>
 
       <section className="mt-12 xs:mt-0 mb-6 max-w-[500px]">
-        <div className="flex flex-col">
-          <div className="text-white text-base font-bold uppercase lg:text-xs">
-            ремонт оргтехники
-          </div>
-          <div className="text-golden text-5xl font-bold uppercase lg:text-3xl">быстро</div>
-          <div className="text-white text-5xl font-bold uppercase lg:text-3xl">
-            качественно
-          </div>
-          <div className="text-white text-5xl font-bold uppercase lg:text-3xl">
-            <span className="text-nice-blue">доступная</span> цена
-          </div>
-        </div>
+        <RepairSection />
         <div>
           <Typography className="text-grey-chateau sm:text-white text-base font-bold mt-9 mb-5">
             Восстановление оргтехники в кратчайшие сроки.

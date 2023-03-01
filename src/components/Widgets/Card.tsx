@@ -1,21 +1,37 @@
+import { motion } from 'framer-motion';
+import useCardInView from '../../hooks/useCardInView';
 
 interface CardProps {
-    partners: { name: string; path: string }[];
-  }
-  
-  const Card: React.FC<CardProps> = ({ partners }) => {
-    return (
-      <>
-        {partners.map((partner) => (
-          <img
-            key={partner.name}
-            className="bg-white w-52 p-2 object-contain h-20"
-            src={partner.path}
-            alt={partner.name}
-          />
-        ))}
-      </>
-    );
-  };
-  
-  export default Card;
+  partners: { name: string; path: string }[];
+}
+
+const Card: React.FC<CardProps> = ({ partners }) => {
+  return (
+    <>
+      {partners.map((partner) => (
+        <CardItem partner={partner} key={partner.name} />
+      ))}
+    </>
+  );
+};
+
+interface CardItemProps {
+  partner: { name: string; path: string };
+}
+
+const CardItem: React.FC<CardItemProps> = ({ partner }) => {
+  const { ref, animation } = useCardInView({ threshold: 0.5 });
+
+  return (
+    <motion.div
+      className="bg-white w-52 p-2 object-contain h-20"
+      ref={ref}
+      initial={animation.initial}
+      animate={animation.animate}
+    >
+      <img src={partner.path} alt={partner.name} />
+    </motion.div>
+  );
+};
+
+export default Card;

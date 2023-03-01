@@ -1,5 +1,5 @@
-import Button from "../Shared/Button";
 import grayLine from "../../assets/grey.webp";
+import AnimateButton from "../Shared/AnimateButton";
 
 const ButtonGroup: React.FC = () => {
   return (
@@ -7,18 +7,36 @@ const ButtonGroup: React.FC = () => {
       <section>
         <div
           style={{ backgroundImage: `url(${grayLine})` }}
-          className="h-48 flex justify-around items-center bg-right px-6 gap-6 lg:gap-3"
+          className="h-48 flex items-center justify-center bg-cover bg-no-repeat bg-center"
         >
-          <a href="#livesklad-widget" className="inline-block">
-            <Button classNames="bg-black text-white font-bold border-golden uppercase lg:lowercase lg:text-sm sm:text-xs">
+          <div className="flex w-full  justify-around  bg-right px-6 gap-6 lg:gap-3 sm:hidden">
+            <AnimateButton
+              path="#livesklad-widget"
+              classNames="bg-black text-white font-bold border-golden uppercase lg:lowercase lg:text-sm sm:text-xs"
+            >
               Нажмите, чтобы проверить статус ремонта
-            </Button>
-          </a>
-          <a href="tel:+79898293242">
-            <Button classNames="bg-golden text-black font-bold border-black uppercase lg:lowercase lg:text-sm sm:text-xs">
+            </AnimateButton>
+            <AnimateButton
+              path="tel:+79898293242"
+              classNames="bg-golden text-black font-bold border-black uppercase lg:lowercase lg:text-sm sm:text-xs"
+            >
               Нажмите, чтобы позвонить в сервис e989
-            </Button>
-          </a>
+            </AnimateButton>
+          </div>
+          <div className="hidden justify-around items-center bg-right px-6 gap-6 lg:gap-3 sm:flex">
+            <AnimateButton
+              path="#livesklad-widget"
+              classNames="bg-black text-white font-bold border-golden uppercase lg:lowercase lg:text-sm sm:text-xs"
+            >
+              Проверить статус ремонта
+            </AnimateButton>
+            <AnimateButton
+              path="tel:+79898293242"
+              classNames="bg-golden text-black font-bold border-black uppercase lg:lowercase lg:text-sm sm:text-xs"
+            >
+              Позвонить в сервис e989
+            </AnimateButton>
+          </div>
         </div>
       </section>
     </>

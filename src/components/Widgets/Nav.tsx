@@ -1,10 +1,7 @@
-import { useState, FC } from "react";
+import {  FC } from "react";
 import { Routes } from "./../../constants/index";
 
 const Nav: FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <>
       <nav className={"flex gap-12 lg:gap-6 md:gap-3 text-xl sm:hidden"}>

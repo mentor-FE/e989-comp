@@ -1,6 +1,7 @@
 import Button from "../Shared/Button";
 import Typography from "../Shared/Typography";
 import systemBlock from "../../assets/block.webp";
+import ScrollButton from "../Widgets/ScrollButtonАnimate";
 
 const Article: React.FC = () => {
   return (
@@ -32,9 +33,7 @@ const Article: React.FC = () => {
               компонентов (например, жестких дисков, оперативной памяти, блоков
               питания), а также настройку соединения с сетью Интернет.
             </Typography>
-            <Button classNames="bg-black border-golden text-turmeric text-base font-bold uppercase w-full my-8 lg:text-xs">
-              Удаление вирусов
-            </Button>
+            <ScrollButton>Удаление вирусов</ScrollButton>
             <Typography
               variant="subheading"
               className="text-4xl lg:text-2xl sm:text-lg text-white font-bold mb-2"
@@ -46,9 +45,7 @@ const Article: React.FC = () => {
               с компьютером и прочие работы, связанные с обеспечением
               правильного функционирования печатающих устройств.
             </Typography>
-            <Button classNames="bg-black border-golden text-turmeric text-base font-bold uppercase w-full my-8 lg:text-xs">
-              Срочная заправка картриджей
-            </Button>
+            <ScrollButton> Срочная заправка картриджей</ScrollButton>
           </div>
         </div>
       </main>
