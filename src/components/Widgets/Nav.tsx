@@ -89,6 +89,7 @@ const Nav: React.FC = () => {
               className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
               key={route.path}
               href={route.path}
+              target={route.target}
             >
               {route.label}
             </a>

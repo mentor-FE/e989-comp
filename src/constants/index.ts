@@ -1,10 +1,10 @@
 import { partners } from "./../assets/index";
 
 export const Routes = [
-  { path: "/", label: "Главная", anchor: "" },
-  { path: "/#livesklad-widget", label: "Проверить заявку", anchor: "livesklad-widget" },
-  { path: "/#warranty", label: "Гарантийный ремонт", anchor: "section-2" },
-  { path: "/#contacts", label: "Контакты", anchor: "section-3" },
+  { path: "/", label: "Главная", anchor: "", target: '' },
+  { path: "https://app.helloclient.io/check.html#34076", label: "Проверить заявку", anchor: "", target: '_blank' },
+  { path: "/#warranty", label: "Гарантийный ремонт", anchor: "section-2", target: '' },
+  { path: "/#contacts", label: "Контакты", anchor: "section-3", target: '' },
 ];
 
 export const Partners = [

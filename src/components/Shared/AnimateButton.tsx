@@ -1,30 +1,32 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Button from "./Button";
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import Button from './Button'
 
 const AnimateButton = ({
   path,
+  target = '',
   classNames,
   children,
 }: {
-  path: string;
-  classNames: string;
-  children: React.ReactNode;
+  path: string
+  target?: string
+  classNames: string
+  children: React.ReactNode
 }) => {
-  const [, setHover] = useState(false);
+  const [, setHover] = useState(false)
 
   const buttonVariants = {
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.4,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
-  };
+  }
   //tel:+79898293242
   return (
-    <a href={path}>
+    <a href={path} target={target}>
       <motion.div
         className="inline-flex items-center cursor-pointer"
         variants={buttonVariants}
@@ -38,7 +40,7 @@ const AnimateButton = ({
         </Button>
       </motion.div>
     </a>
-  );
-};
+  )
+}
 
-export default AnimateButton;
+export default AnimateButton
