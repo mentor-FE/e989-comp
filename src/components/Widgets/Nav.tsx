@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { Transition } from "@headlessui/react";
-import { useMediaQuery } from "react-responsive";
-
-import { Routes } from "./../../constants/index";
+import { useState } from 'react'
+import { Transition } from '@headlessui/react'
+import { useMediaQuery } from 'react-responsive'
+import { HashLink } from 'react-router-hash-link'
+import { Routes } from './../../constants/index'
+import { Link } from 'react-router-dom'
 
 const Nav: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 576 });
+  const [isOpen, setIsOpen] = useState(false)
+  const isMobile = useMediaQuery({ maxWidth: 576 })
 
   return (
     <>
@@ -68,36 +69,65 @@ const Nav: React.FC = () => {
                 aria-orientation="vertical"
                 aria-labelledby="options-menu"
               >
-                {Routes.map((route) => (
-                  <a
-                    className="text-white text-xl font-bold hover:text-сadet-grey ease-in-out duration-500"
-                    key={route.path}
-                    href={route.path}
-                  >
-                    {route.label}
-                  </a>
-                ))}
+                {Routes.map((route) => {
+                  if (route.link) {
+                    return (
+                      <Link
+                        className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
+                        key={route.path}
+                        to={route.path}
+                      >
+                        {route.label}
+                      </Link>
+                    )
+                  }
+
+                  return (
+                    <HashLink
+                      className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
+                      key={route.path}
+                      to={route.path}
+                      target={route.target}
+                    >
+                      {route.label}
+                    </HashLink>
+                  )
+                })}
               </div>
             </div>
           </Transition>
         </div>
       )}
       {!isMobile && (
-        <nav className={"flex gap-12 lg:gap-6 md:gap-3 text-xl sm:hidden"}>
-          {Routes.map((route) => (
-            <a
-              className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
-              key={route.path}
-              href={route.path}
-              target={route.target}
-            >
-              {route.label}
-            </a>
-          ))}
+        <nav className={'flex gap-12 lg:gap-6 md:gap-3 text-xl sm:hidden'}>
+          {Routes.map((route) => {
+            if (route.link) {
+              return (
+                <Link
+                  className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
+                  key={route.path}
+                  to={route.path}
+                >
+                  {route.label}
+                </Link>
+              )
+            }
+
+            return (
+              <HashLink
+                className="lg:text-sm md:text-xs text-white font-bold hover:text-сadet-grey ease-in-out duration-500"
+                key={route.path}
+                to={route.path}
+                target={route.target}
+              >
+                {route.label}
+              </HashLink>
+            )
+          })}
         </nav>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
