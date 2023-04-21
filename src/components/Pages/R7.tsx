@@ -4,15 +4,16 @@ const R7 = () => {
   return (
     <div className="bg-R7-main-grey px-6">
       <div className="title pt-4">
-        <h1 className="text-4xl font-bold text-R7-main-blue text-end">
+        <h1 className="text-4xl font-bold text-R7-main-blue text-center">
           О компании Р7-Офис
         </h1>
       </div>
       <div className="flex justify-start">
         <img src={R7logo} alt="R7-logo" className="w-full max-w-xs h-auto" />
       </div>
-      <div className="flex justify-start">
+      <div className="flex justify-start pt-4">
         <a
+
           href="https://r7-office.ru/"
           target="_blank"
           rel="noreferrer"
