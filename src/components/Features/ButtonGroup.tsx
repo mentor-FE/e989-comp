@@ -15,6 +15,7 @@ const ButtonGroup: React.FC = () => {
               if (item.target) {
                 return (
                   <AnimateButton
+                    key={item.path}
                     path={item.path}
                     target={item.target}
                     classNames="bg-black text-white font-bold border-golden uppercase lg:lowercase lg:text-sm sm:text-xs"

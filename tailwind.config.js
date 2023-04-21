@@ -36,6 +36,7 @@ module.exports = {
       "pumpkin-orange": "#ef7f1a",
       "dark-slate-grey": "#202F37",
       "twilight-lavender": "#875173",
+      "R7-main-grey": "#F8F8F8",
     },
     align: {
       left: "left",
