@@ -24,7 +24,6 @@ const AnimateButton = ({
       },
     },
   }
-  //tel:+79898293242
   return (
     <a href={path} target={target}>
       <motion.div
@@ -35,7 +34,6 @@ const AnimateButton = ({
         onHoverEnd={() => setHover(false)}
       >
         <Button classNames={classNames}>
-          {/* Нажмите, чтобы позвонить в сервис e989 */}
           {children}
         </Button>
       </motion.div>

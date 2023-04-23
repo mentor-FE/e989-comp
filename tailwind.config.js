@@ -37,6 +37,7 @@ module.exports = {
       "dark-slate-grey": "#202F37",
       "twilight-lavender": "#875173",
       "R7-main-grey": "#F8F8F8",
+      "R7-accent-red": "#FF6A6A",
     },
     align: {
       left: "left",

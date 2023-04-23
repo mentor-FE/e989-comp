@@ -1,4 +1,5 @@
-import { partners } from './../assets/index'
+import { partners } from '../assets/index'
+
 
 export const Routes = [
   { path: '/', label: 'Главная', anchor: '', target: '' },
@@ -6,16 +7,24 @@ export const Routes = [
     path: 'https://app.helloclient.io/check.html#34076',
     label: 'Проверить заявку',
     anchor: '',
-    target: '_blank', link: false
+    target: '_blank',
+    link: false,
   },
   {
     path: '/#warranty',
     label: 'Гарантийный ремонт',
     anchor: 'section-2',
-    target: '', link: false
+    target: '',
+    link: false,
   },
-  { path: '/#contacts', label: 'Контакты', anchor: 'section-3', target: '', link: false },
-  { path: '/r7', label: 'R7', anchor: '', target: '', link: true },
+  {
+    path: '/#contacts',
+    label: 'Контакты',
+    anchor: 'section-3',
+    target: '',
+    link: false,
+  },
+  { path: '/r7', label: 'R7-Офис', anchor: '', target: '', link: true },
 ]
 
 export const Partners = [
@@ -48,3 +57,4 @@ export const LiveskladOptions = {
   hide_given: true,
   currency: 'руб',
 }
+
