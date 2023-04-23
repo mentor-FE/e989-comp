@@ -31,7 +31,7 @@ const BodyProducts = ({ title, description, advantages,  features, list }: Props
     <div>
       <Typography
         variant="subheading"
-        className="text-4xl sm:text-2xl text-black mb-2 text-center pt-10"
+        className="text-4xl sm:text-2xl text-black mb-2 text-center py-14"
       >
         {title}
       </Typography>

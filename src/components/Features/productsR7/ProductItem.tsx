@@ -7,9 +7,9 @@ interface ProductItemProps {
 
 const ProductItem = ({ icon, title }: ProductItemProps) => {
   return (
-    <div className="flex justify-start items-center">
-      <div className="flex m-0 w-11">{icon}</div>
-      <h3 className="ml-4">{title}</h3>
+    <div className="flex gap-3 justify-start items-center md:flex-col md:justify-center md:items-center">
+      <div className="w-11">{icon}</div>
+      <h3 className="">{title}</h3>
     </div>
   )
 }

@@ -17,13 +17,16 @@ const DescriptionR7 = ({
   advantagesList,
 }: TextEditorProps) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 md:flex md:flex-row md:items-center">
-      <img
-        src={img}
-        alt={title}
-        className="w-1/3 md:w-1/4 mx-auto mb-4 md:mb-0 md:mr-6"
-      />
-      <div className="md:w-2/3">
+    <div className="flex flex-row-reverse bg-white shadow-lg rounded-lg p-6">
+      {img && (
+        <img
+          src={img}
+          alt={title}
+          className="w-40 self-start ml-3"
+        />
+      )}
+
+      <div className="self-start mr-auto">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
         <p className="text-gray-600 text-sm mb-4">{description}</p>
         {advantages && (
